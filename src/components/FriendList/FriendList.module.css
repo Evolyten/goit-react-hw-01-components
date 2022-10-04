@@ -1,0 +1,38 @@
+.status_red{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.status_green{
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.friend_list{
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+.item:not(:last-child){
+    margin-bottom: 10px;
+}
+
+
+.avatar{
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,60 @@
+.profile {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #d5dadb;
+    margin: 50px auto;
+    padding-top: 50px;
+    border-radius: 5px;
+}
+
+
+.avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.tag {
+    display: block;
+    font-style: 14px;
+    color: grey;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.location {
+    display: block;
+    font-style: 14px;
+    color: grey;
+    text-decoration: none;
+}
+
+.stats {
+    display: flex;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.user_list_item {
+    width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d5dadb;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #daf3f7;
+}
+
+.user_item_head {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
