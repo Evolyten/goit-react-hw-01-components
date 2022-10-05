@@ -1,7 +1,7 @@
-import { Profile } from 'components/userCard/userCard'
-import { Statistic } from 'components/Statistics/statistics'
-import { FriedList } from './FriendList/FriendList'
-import { TransactionHistory } from './TransactionHistory/transactionHistory'
+import { Profile } from 'components/profile/profile'
+import { Statistic } from 'components/statistics/statistics'
+import { FriedList } from './friendList/FriendList'
+import { TransactionHistory } from './transactionHistory/transactionHistory'
 import user from '../user.json'
 import data from '../data.json'
 import friends from '../friends.json'
@@ -12,10 +12,9 @@ export const App = () => {
   return (
     <div>
       <Profile username={user.username} tag={user.tag} location={user.location} avatar={user.avatar} stats={user.stats} />
-      <Statistic data={data} />
+      <Statistic stats={data} title='upload stats' />
       <FriedList friends={friends} />
-
-      <TransactionHistory transactions={transactions} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };

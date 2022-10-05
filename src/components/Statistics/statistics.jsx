@@ -2,11 +2,15 @@ import PropTypes from 'prop-types'
 import css from './statistic.module.css'
 
 
-export const Statistic = ({data}) => {
+export const Statistic = ({stats,title}) => {
     return <section className={css.statistics}>
-  <h2 className={css.title}>Upload stats</h2>
+      { title&&<h2 className={css.title}>{title}</h2>}
   <ul className={css.stat_list}>
-        {data.map(n => <li className={css.item} key={n.id} style={{backgroundColor:getRandomHexColor()}}><span className={css.label}>{n.label}</span><span className={css.percentage}>{n.percentage+"%"}</span></li>)}
+        {stats.map(param =>
+          <li className={css.item} key={param.id} style={{ backgroundColor: getRandomHexColor() }}>
+            <span className={css.label}>{param.label}</span>
+            <span className={css.percentage}>{param.percentage + "%"}</span>
+          </li>)}
   </ul>
 </section>
 }
@@ -24,5 +28,6 @@ Statistic.propTypes = {
       percentage:PropTypes.number.isRequired,
       
     })
-  )
+  ),
+  title:PropTypes.string
 }
